@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Varela+Round&family=Voltaire&display=swap');
+
+@font-face {
+    font-family: Emulogic;
+    src: url(/fonts/emulogic.ttf);
+}
+
+@font-face {
+    font-family: Namco;
+    src: url(/fonts/namco.ttf);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    color: #00ffde;
+    height: calc(100vh - 30px);
+    width: 100vw;
+    max-width: 100%;
+    cursor: url("/cursors/cursor-default.png") 17 0, auto;
+}
+
+a {
+    color: #ff0000;
+    cursor: url("/cursors/cursor-pointer.png") 17 0, pointer;
+}
+
+a:active {
+    color: #ff6060;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+nav {
+    cursor: url("/cursors/cursor-default.png") 17 0, default;
+}
+
+nav a {
+    display: inline-block;
+    margin: 6px;
+    margin-bottom: 0px;
+    font-family: "Emulogic", sans-serif;
+    font-size: 16px;
+}
+
+main {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Namco";
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+#main-header, #whatware-inner-text {
+    color: #FFFFFF;
+    font-family: "Voltaire";
+    font-size: 36px;
+}
+
+#starfield {
+    position: fixed;
+    left:0;
+    top:0;
+    z-index:-1;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}

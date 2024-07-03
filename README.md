@@ -1,5 +1,5 @@
 # website
-Future source code of https://whatware.net
+Source code of https://whatware.net
 
 raw html/css/js
 

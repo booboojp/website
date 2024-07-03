@@ -9,14 +9,16 @@ function getRandomColor() {
     return color;
 }
 
+oldWidth = 0
 oldHeight = 0
 
 function animate() {
     canvas.width = document.documentElement.clientWidth;
     canvas.height = document.documentElement.clientHeight;
     
-    if (oldHeight != canvas.height) {
+    if (oldWidth != canvas.width || oldHeight != canvas.height) {
         stars = [];
+        oldWidth = canvas.width;
         oldHeight = canvas.height;
     }
     

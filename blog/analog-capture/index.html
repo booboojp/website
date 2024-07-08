@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog - WhatWare</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <link rel="stylesheet" href="/style.css">
+    <script src="/starfield.js" defer></script>
+    <script src="/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="main-header">W<span id="whatware-inner-text">hatWare</span>?</h1>
+        <nav>
+            <a href="/">home</a>
+            <a href="/about">about</a>
+            <a href="/projects">projects</a>
+            <a href="/blog">blog</a>
+            <a href="/faq">faq</a>
+            <a href="/games">online games</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>digitizing analog video</h2>
+        <p>In this blog post I'll be going over how I digitize analog video using a WinTV card, from multiple sources including VHS tapes and game systems.</p>
+        <br>
+
+        <h3>required equipment</h3>
+        <p>
+            <ul>
+                <li>Video source (VHS tapes and VCR, game console, etc)
+                    <ul>
+                        <li>When recording VHS tapes, I use a high quality JVC VCR, but then pass the video through a cheap Funai VCR/DVD recorder combo deck as it has a built in time-base corrector (TBC)</li>
+                    </ul>
+                </li>
+                <li>RCA cables</li>
+                <li>Optional - Digital TBC (time-base corrector, you can either use a standalone one, or pass the video through a DVD recorder/VCR combo deck)</li>
+                <li>Windows PC
+                    <ul><li>I would have liked to use Linux, but sadly the state of recording video on Linux is quite sad at the moment</li></ul>
+                </li>
+                <li>Recording software (WinTV software, OBS, etc)</li>
+                <li><a href="https://www.videolan.org/vlc/">VLC media player</a> to view finished videos</li>
+                <li>Capture device - I use a WinTV card</li>
+            </ul>
+        </p>
+        <br>
+
+        <h3>hardware setup</h3>
+        <p>
+            <ol>
+                <li>Ensure your analog source is properly outputting video by connecting it to a TV or monitor</li>
+                <li>Connect the source to the time-base corrector with RCA cables (optional)</li>
+                <li>Install the capture device into the PC</li>
+                <li>Connect the output of the TBC to the input of the capture device, or if not using a TBC, connect the source directly</li>
+                <li>If your TBC has a second output, it may be helpful to connect that to a second monitor for testing and/or lower-latency viewing as capture devices often have significant latency</li>
+            </ol>
+        </p>
+        <br>
+
+        <h3>software setup</h3>
+        <p>
+            <ol>
+                <li>Install VLC media player as well as the capture software of your preference
+                    <ul><li>If you're using a WinTV card, the WinTV software is recommended as it properly configures deinterlacing of the output of the card</li></ul>
+                </li>
+                <li>Configure your software to record from your card
+                    <ul><li>if you're using the WinTV software, you can right click on the main screen of the program, click on Settings, and go to the channel setup, where you can select S-video and/or composite</li></ul>
+                </li>
+                <li>Configure the software to record in the highest quality. WinTV software records in MPEG-2, so the highest quality available should be a little higher than DVD quality.</li>
+                <li>Make a test recording using a source you would like to record, and play it back in VLC.
+                    <ul>
+                        <li>If your video appears shaky, you may need to use a TBC.</li>
+                        <li>If your video does not have correct colors, you may have selected the wrong video format. The standard video format in the USA is NTSC.</li>
+                        <li>If your video appears blurrier than you would expect, you may need to change the resolution. The recommended resolution is 720x480 (anamorphic).</li>
+                    </ul>
+                </li>
+            </ol>
+        </p>
+        <br>
+
+        <h3>conclusion</h3>
+        <p>This guide should be the easiest way to record high-quality composite capture in a digital format. The WinTV cards generally offer the easiest way to record high-quality analog video, and the software takes all the hassle in configuring for the best quality possible.</p>
+        <p>One issue that you may encounter is that the WinTV software records in MPEG-2. While this is a standard video format, many programs do not support it, so you may want to convert to another format. <a href="https://handbrake.fr/">HandBrake</a> is one of the best pieces of software to do this, and it's free and open-source. </p>
+    </main>
+    
+    <footer>
+        <div id="footer-gif">
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+            </a>
+            <a href="https://snipchu.neocities.org">
+                <img src="/88x31/snipchu.gif" alt="bunnyguy island" />
+            </a>
+            <a href="https://github.com/gorhill/uBlock">
+                <img src="/88x31/ublock.png" alt="uBlock Origin" />
+            </a>
+            <a href="https://archive.org">
+                <img src="/88x31/internetarchive.png" alt="Internet Archive" />
+            </a>
+            <span>
+                <img src="/88x31/antinft.gif" alt="NFTs are bad" />
+            </span>
+            <a href="https://debian.org">
+                <img src="/88x31/debian.gif" alt="Debian" />
+            </a>
+            <a href="https://mozilla.org/firefox">
+                <img src="/88x31/firefox.png" alt="Firefox" />
+            </a>
+        </div>
+        
+        <p>🄯<span id="currentYear"></span> WhatWare. <a href="https://github.com/whatwareweb/website" target="_blank">Source code (GitHub)↗</a></p>
+    </footer>
+    
+    <canvas id="starfield"></canvas>
+</body>
+</html>

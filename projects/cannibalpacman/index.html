@@ -40,6 +40,7 @@
         <br>
         
         <h3>supplies and parts list</h3>
+        <p>In addition to the standard electronics and woodworking tools, you will need the parts listed below.</p>
         <ul>
             <li>Power
                 <ul>
@@ -48,6 +49,9 @@
                     <li>Display power supply</li>
                     <li>Computer power supply</li>
                     <li>Audio amplifier power supply</li>
+                    <li>DC Fan</li>
+                    <li>Molex connector</li>
+                    <li>Copper wire</li>
                 </ul>
             </li>
             <li>Computer/digital parts
@@ -108,14 +112,36 @@
             The block diagram contains all connections that need to be made to assemble this machine.
             Several of the components will need to be modified in some way such as soldering on extra connectors. There are also various components that will need to be assembled via soldering.
         </p>
-
+        
         <h4>block diagram</h4>
         <a href="https://github.com/whatwareweb/cannibal-pac-man/tree/main/Electrical%20Diagrams/block-diagram">
-            <img src="block-diagram.webp" alt="Block diagram">
+            <img src="https://raw.githubusercontent.com/whatwareweb/cannibal-pac-man/main/Electrical%20Diagrams/block-diagram/block-diagram.webp" alt="Block diagram">
             <p>Click to open sources in new tab or to view larger image</p>
         </a>
-
+        
         <h4>modified components</h4>
+        <ul>
+            <li>
+                <h5>audio amplifier board</h5>
+                <p>The specific board that I used for this project is a TPA3116D2 board that has a volume control knob, 3.5mm line in jack, and screw terminals for the inputs and outputs.</p>
+                <a href="tpa3116d2-ID.jpg">
+                    <img src="tpa3116d2-ID.jpg" alt="TPA3116D2 amplifier board" style="max-width: 400px;">
+                    <p>Click to view full-size image</p>
+                </a>
+                <p>
+                    The reason I chose this board is because the heatsink that is provided does not come pre-installed. This means you can get a good look at the chip to make sure it is not a fake TPA3116D2, which are rampant among these kinds of boards.
+                    Make sure you get a real TPA3116D2 because the fakes have significantly worse signal-to-noise ratios and power outputs.
+                    This board can easily be identified because it has the word "Audio" on the top-left corner, but the manufacturer made a typo so it actually reads "Avdio".
+                </p>
+                <p>
+                    To get this board to work for the arcade machine, you'll need to desolder the potentiometer. In its place, solder 3 jumper wires, one shorting the power switch pins and the other 2 shorting the pins from the center to the positive tap of the potentiometer.
+                    These wires will ensure the power is always on so it can be switched from the power strip and that the volume is all the way up.
+                </p>
+            </li>
+            <li>
+                <h5>lcd driver board</h5>
+            </li>
+        </ul>
     </main>
     
     <footer>

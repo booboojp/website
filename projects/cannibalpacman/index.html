@@ -4,12 +4,12 @@
     <title>Projects - WhatWare</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    
+
     <link rel="stylesheet" href="/style.css">
     <script src="/starfield.js" defer></script>
     <script src="/main.js" defer></script>
@@ -26,19 +26,20 @@
             <a href="/games">online games</a>
         </nav>
     </header>
-    
+
     <main>
         <h2>cannibal pac―man Build</h2>
         <br>
-        
-        <h3>introduction</h3>
-        <p>
-            Pac-Man Battle Royale (aka Cannibal Pac-Man) is an arcade game that was released in arcades by Namco, the original creators of Pac-Man, in 2011.
-            It was originally arcade-only, but was eventually released for PC in the Pac-Man Collection. This build uses a modded version of that official PC release, in combination with a wood/MDF enclosure and standard x86 PC hardware to recreate the arcade experience faithfully, but miniaturized.
-            The 3D models used in this build are based around a 23.6" IPS LCD panel that can be found in any small old TV or LCD computer monitor. a 23.6 inch display is 3/4 scale of the original.
-        </p>
+
+
+        <h3 id="introduction">introduction</h3>
+        <p>Pac-Man Battle Royale (aka Cannibal Pac-Man) is an arcade game that was released in arcades by Namco, the original creators of Pac-Man, in 2011.</p>
+        <p>It was originally arcade-only, but was eventually released for PC in the Pac-Man Collection. This build uses a modded version of that official PC release, in combination with a wood/MDF enclosure and standard x86 PC hardware to recreate the arcade experience faithfully, but miniaturized.</p>
+        <p>The 3D models used in this build are based around a 23.6" IPS LCD panel that can be found in any small old TV or LCD computer monitor. a 23.6 inch display is 3/4 scale of the original.</p>
+        <p>All 3D models for 3D prints and the cabinet itself can be found at <a href="https://github.com/whatwareweb/cannibal-pac-man" target="_blank">this github link.↗</a></p>
         <br>
-        
+
+
         <h3>supplies and parts list</h3>
         <p>In addition to the standard electronics and woodworking tools, you will need the parts listed below.</p>
         <ul>
@@ -81,6 +82,7 @@
             </li>
             <li>Mounting/assembly
                 <ul>
+                    <li>3 pieces 24" by 48" plywood or MDF</li>
                     <li>Wood screws</li>
                     <li>Machine screws</li>
                     <li>Circuit board plastic (nylon) standoffs</li>
@@ -106,19 +108,18 @@
             </li>
         </ul>
         <br>
-        
+
+
         <h3>wiring and electronics</h3>
-        <p>
-            The block diagram contains all connections that need to be made to assemble this machine.
-            Several of the components will need to be modified in some way such as soldering on extra connectors. There are also various components that will need to be assembled via soldering.
-        </p>
-        
+        <p>The block diagram contains all connections that need to be made to assemble this machine.</p>
+        <p>Several of the components will need to be modified in some way such as soldering on extra connectors. There are also various components that will need to be assembled via soldering.</p>
+
         <h4>block diagram</h4>
         <a href="https://github.com/whatwareweb/cannibal-pac-man/tree/main/Electrical%20Diagrams/block-diagram">
             <img src="https://raw.githubusercontent.com/whatwareweb/cannibal-pac-man/main/Electrical%20Diagrams/block-diagram/block-diagram.webp" alt="Block diagram">
             <p>Click to open sources in new tab or to view larger image</p>
         </a>
-        
+
         <h4>modified components</h4>
         <ul>
             <li>
@@ -134,16 +135,36 @@
                     This board can easily be identified because it has the word "Audio" on the top-left corner, but the manufacturer made a typo so it actually reads "Avdio".
                 </p>
                 <p>
-                    To get this board to work for the arcade machine, you'll need to desolder the potentiometer. In its place, solder 3 jumper wires, one shorting the power switch pins and the other 2 shorting the pins from the center to the positive tap of the potentiometer.
+                    To get this board to work for the arcade machine, you'll need to desolder the potentiometer and power switch combo. In its place, solder 3 jumper wires, one shorting the power switch pins and the other 2 shorting the pins from the center to the positive tap of the potentiometer.
                     These wires will ensure the power is always on so it can be switched from the power strip and that the volume is all the way up.
                 </p>
             </li>
             <li>
                 <h5>lcd driver board</h5>
+                <p>There are many different kinds of LCD driver boards, so depending on what LCD you are using, this step will be different. All that needs to happen is that you tap into the 12v supply of the board to make an output for the fan.</p>
+                <p>It is not recommended to use the audio power supply for the fans because the fans can introduce noise into the audio signal.</p>
             </li>
         </ul>
+        <br>
+
+
+        <h3>mechanical assembly</h3>
+
+        <h4>cabinet</h4>
+        <p>The main piece that needs assembly is the outer cabinet that can be made of wood or MDF. This cabinet has been designed to just barely fit onto a piece of 2' by 4' plywood, 1/2 inch thick, so I recommend to buy 3, just in case.</p>
+        <p>I used plywood to make my cabinet. The main advantage is strength, however the grain can show through the paint. MDF can also be used, but if any water is spilled, the MDF is essentially ruined. It is also slightly weaker than plywood.</p>
+        <p>The hinges and latches are used to make the machine open like a book. This will be useful for servicing the cabinet. They can be installed on the long sides of the cabinet where it splits into 2 compartments.</p>
+        <p>The 3D model and dimensions for the wood can be found in the GitHub link at the top of this page in the <a href="#introduction">introduction section</a>.</p>
+
+        <h4>plastic sheet</h4>
+        <p>A clear plastic sheet can be used to cover the display. It is not required, but very highly recommended because the LCD dispays are quite fragile.</p>
+        <p>I used a Lexan (polycarbonate) sheet for this purpose because it is easy to work with when using standard tools and much less brittle than acrylic. However, if you have a laser cutter, you may find it easier to use acrylic.</p>
+
+        <h4>electronics mounting</h4>
+        <p>The wood cabinet has 2 compartments. The top compartment is for the LCD and supporting components like the driver board, and the controls. The bottom compartment is essentially for everything else.</p>
+        <p>All the components have been selected with mountability in mind. The nylon standoffs can be installed into the wood, and then used to mount any PCBs that need to be mounted. My Intel NUC came with a VESA bracket that I repurposed to use for mounting to the wood. Anything else that cannot be mounted traditionally can be mounted using <a href="https://youtu.be/Xa8IrMWXtYc" target="_blank">this tutorial↗</a> from the 8-bit guy.</p>
     </main>
-    
+
     <footer>
         <div id="footer-gif">
             <a href="https://jigsaw.w3.org/css-validator/check/referer">
@@ -168,10 +189,10 @@
                 <img src="/88x31/firefox.png" alt="Firefox" />
             </a>
         </div>
-        
+
         <p>🄯<span id="currentYear"></span> WhatWare. <a href="https://github.com/whatwareweb/website" target="_blank">Source code (GitHub)↗</a></p>
     </footer>
-    
+
     <canvas id="starfield"></canvas>
 </body>
 </html>

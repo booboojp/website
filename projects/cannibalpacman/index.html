@@ -151,10 +151,11 @@
         <h3>mechanical assembly</h3>
 
         <h4>cabinet</h4>
-        <p>The main piece that needs assembly is the outer cabinet that can be made of wood or MDF. This cabinet has been designed to just barely fit onto a piece of 2' by 4' plywood, 1/2 inch thick, so I recommend to buy 3, just in case.</p>
+        <p>The main piece that needs assembly is the outer cabinet that can be made of wood or MDF. This cabinet has been designed to just barely fit onto a piece of 24" by 48" plywood, 1/2 inch thick, so I recommend to buy 3, just in case.</p>
         <p>I used plywood to make my cabinet. The main advantage is strength, however the grain can show through the paint. MDF can also be used, but if any water is spilled, the MDF is essentially ruined. It is also slightly weaker than plywood.</p>
         <p>The hinges and latches are used to make the machine open like a book. This will be useful for servicing the cabinet. They can be installed on the long sides of the cabinet where it splits into 2 compartments.</p>
         <p>The 3D model and dimensions for the wood can be found in the GitHub link at the top of this page in the <a href="#introduction">introduction section</a>.</p>
+        <p>Once you've finished building the cabinet, you can go ahead and paint it yellow. This will make it look fairly similar to the original arcade machine.</p>
 
         <h4>plastic sheet</h4>
         <p>A clear plastic sheet can be used to cover the display. It is not required, but very highly recommended because the LCD dispays are quite fragile.</p>
@@ -163,6 +164,28 @@
         <h4>electronics mounting</h4>
         <p>The wood cabinet has 2 compartments. The top compartment is for the LCD and supporting components like the driver board, and the controls. The bottom compartment is essentially for everything else.</p>
         <p>All the components have been selected with mountability in mind. The nylon standoffs can be installed into the wood, and then used to mount any PCBs that need to be mounted. My Intel NUC came with a VESA bracket that I repurposed to use for mounting to the wood. Anything else that cannot be mounted traditionally can be mounted using <a href="https://youtu.be/Xa8IrMWXtYc" target="_blank">this tutorial↗</a> from the 8-bit guy.</p>
+        <br>
+
+
+        <h3>software</h3>
+        <p>Now that we have a fully assembled cabinet, let's get onto the part that makes this whole thing come together, the software!</p>
+        <p>The first piece of software you'll need is the game itself. While you cannot get just Pac-Man Battle Royale, you can get Pac-Man Collection, which includes it. However, a mod needs to be installed to remove some excess menu items and that sort of thing. The mod can be found at <a href="https://github.com/vikbez/pacbrcade">this GitHub link↗</a>.</p>
+        <p>Once you have set up the game and it is running properly, you need to configure X360CE. This software is annoying to use, but I'll try to give a simple overview of everything you need to do. </p>
+        <p>The first thing you need to do when you plug in your joystick adapter boards is to go into X360CE on each controller and press <b>Clear</b>. You can access each controller using the tabs near the top of the dialog. If you get any dialog asking you to download configuration profiles when you start up X360CE, just press cancel as we don't need them.</p>
+        <p>Next, we need to map the controls. Since our joysticks have 4 directional buttons, you can map them to the D-pad. To do this, for each controller, click on the dropdown next to a D-pad direction and click <b>Record</b>. Repeat this step for each of the joystick buttons.</p>
+        <p>Configuring the buttons is very similar to the joysticks. For each of the 4 buttons, do the same procedure as the joysticks but configure the A button instead of the D-pad.</p>
+        <p>The next required piece of software you'll have to write yourself, but it is super simple. All it is is a batch script that will run on startup of the PC, which launches the game. You may also want to launch some sort of intro video as well. This script can be put in the startup folder of your Windows user.</p>
+        <p>The last piece of software you need is already built into Windows. Open a command prompt, and run the command <b>netplwiz</b>. Once the dialog shows up, uncheck the option <b>Users must enter a username and password to use this computer</b>. Next, click on the user account you have configured to autostart the game. Then, click OK. And your software setup is complete!</p>
+        <br>
+
+        <h3>conclusion</h3>
+        <p>If you've read this far, you've hopefully completed the guide and have a working arcade machine!! I hope you've had fun making it, I sure did! However, if you have any issues, make sure to check the troubleshooting section below.</p>
+        <br>
+
+
+        <h3>troubleshooting</h3>
+        <p>The main software I had trouble with was X360CE. The inputs kept getting randomly swapped, and then I had to redo the whole configuration. I solved this issue by swapping out my wireless mouse and keyboard combo, for some reason it was showing up in the Windows joystick configuration in the control panel.</p>
+        <p>The other software I had trouble with was the batch script. But after I read some tutorials online about how it worked, I was able to get it working.</p>
     </main>
 
     <footer>

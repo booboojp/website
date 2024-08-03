@@ -104,6 +104,10 @@ main {
     margin-bottom: 50px;
 }
 
+main img {
+    max-width: 100%;
+}
+
 footer {
     justify-content: center;
     text-align: center;

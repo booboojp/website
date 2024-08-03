@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projects - WhatWare</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="/style.css">
+    <script src="/starfield.js" defer></script>
+    <script src="/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="main-header">W<span id="whatware-inner-text">hatWare</span>?</h1>
+        <nav>
+            <a href="/">home</a>
+            <a href="/about">about</a>
+            <a href="/projects">projects</a>
+            <a href="/blog">blog</a>
+            <a href="/faq">faq</a>
+            <a href="/games">online games</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>cannibal pac―man Build</h2>
+        <br>
+
+
+        <h3 id="introduction">introduction</h3>
+        <p>Pac-Man Battle Royale (aka Cannibal Pac-Man) is an arcade game that was released in arcades by Namco, the original creators of Pac-Man, in 2011.</p>
+        <p>It was originally arcade-only, but was eventually released for PC in the Pac-Man Collection. This build uses a modded version of that official PC release, in combination with a wood/MDF enclosure and standard x86 PC hardware to recreate the arcade experience faithfully, but miniaturized.</p>
+        <p>The 3D models used in this build are based around a 23.6" IPS LCD panel that can be found in any small old TV or LCD computer monitor. a 23.6 inch display is 3/4 scale of the original.</p>
+        <p>All 3D models for 3D prints and the cabinet itself can be found at <a href="https://github.com/whatwareweb/cannibal-pac-man" target="_blank">this github link.↗</a></p>
+        <br>
+
+
+        <h3>supplies and parts list</h3>
+        <p>In addition to the standard electronics and woodworking tools, you will need the parts listed below.</p>
+        <ul>
+            <li>Power
+                <ul>
+                    <li>IEC C14 to NEMA 5-15R adapter</li>
+                    <li>Power strip</li>
+                    <li>Display power supply</li>
+                    <li>Computer power supply</li>
+                    <li>Audio amplifier power supply</li>
+                    <li>DC Fan</li>
+                    <li>Molex connector</li>
+                    <li>Copper wire</li>
+                </ul>
+            </li>
+            <li>Computer/digital parts
+                <ul>
+                    <li>Intel NUC or similar mini PC</li>
+                    <li>USB hub - at least 4 ports</li>
+                    <li>USB joystick driver boards</li>
+                    <li>wireless USB keyboard and touchpad combo (Bluetooth is nice for wireless)</li>
+                </ul>
+            </li>
+            <li>A/V components
+                <ul>
+                    <li>LCD panel</li>
+                    <li>LCD driver board</li>
+                    <li>Video/audio cable</li>
+                    <li>Good quality self-enclosed speakers (can salvage from old TV, ported enclosures will sound better)</li>
+                    <li>CCFL to LED backlight mod kit (optional)</li>
+                    <li>Modified TPA3116D2 amplifier board</li>
+                    <li>Auxiliary cable</li>
+                </ul>
+            </li>
+            <li>Controls
+                <ul>
+                    <li>4x arcade button</li>
+                    <li>4x Joystick</li>
+                </ul>
+            </li>
+            <li>Mounting/assembly
+                <ul>
+                    <li>3 pieces 24" by 48" plywood or MDF</li>
+                    <li>Wood screws</li>
+                    <li>Machine screws</li>
+                    <li>Circuit board plastic (nylon) standoffs</li>
+                    <li>Nuts and bolts (or machine screws) for joystick mounting</li>
+                    <li>3D-printed power supply mounting brackets</li>
+                    <li>Velcro One-wrap strips for mounting power supply</li>
+                    <li>Rubber feet</li>
+                    <li>Plywood or MDF for cabinet</li>
+                    <li>Wood glue</li>
+                    <li>Clear plastic sheet to cover LCD - Lexan (polycarbonate) recommended</li>
+                    <li>Screw-on nylon cable clamps (3/8" or 10mm recommended)</li>
+                    <li>2x utility hinge</li>
+                    <li>2x chest latches</li>
+                    <li>Yellow cloth for speaker grilles</li>
+                    <li>Aluminum chain-link fence ties</li>
+                </ul>
+            </li>
+            <li>Design/art
+                <ul>
+                    <li>Decals/labels</li>
+                    <li>Yellow paint</li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+
+
+        <h3>wiring and electronics</h3>
+        <p>The block diagram contains all connections that need to be made to assemble this machine.</p>
+        <p>Several of the components will need to be modified in some way such as soldering on extra connectors. There are also various components that will need to be assembled via soldering.</p>
+
+        <h4>block diagram</h4>
+        <a href="https://github.com/whatwareweb/cannibal-pac-man/tree/main/Electrical%20Diagrams/block-diagram">
+            <img src="https://raw.githubusercontent.com/whatwareweb/cannibal-pac-man/main/Electrical%20Diagrams/block-diagram/block-diagram.webp" alt="Block diagram">
+            <p>Click to open sources in new tab or to view larger image</p>
+        </a>
+
+        <h4>modified components</h4>
+        <ul>
+            <li>
+                <h5>audio amplifier board</h5>
+                <p>The specific board that I used for this project is a TPA3116D2 board that has a volume control knob, 3.5mm line in jack, and screw terminals for the inputs and outputs.</p>
+                <a href="tpa3116d2-ID.jpg">
+                    <img src="tpa3116d2-ID.jpg" alt="TPA3116D2 amplifier board" style="max-width: 400px;">
+                    <p>Click to view full-size image</p>
+                </a>
+                <p>
+                    The reason I chose this board is because the heatsink that is provided does not come pre-installed. This means you can get a good look at the chip to make sure it is not a fake TPA3116D2, which are rampant among these kinds of boards.
+                    Make sure you get a real TPA3116D2 because the fakes have significantly worse signal-to-noise ratios and power outputs.
+                    This board can easily be identified because it has the word "Audio" on the top-left corner, but the manufacturer made a typo so it actually reads "Avdio".
+                </p>
+                <p>
+                    To get this board to work for the arcade machine, you'll need to desolder the potentiometer and power switch combo. In its place, solder 3 jumper wires, one shorting the power switch pins and the other 2 shorting the pins from the center to the positive tap of the potentiometer.
+                    These wires will ensure the power is always on so it can be switched from the power strip and that the volume is all the way up.
+                </p>
+            </li>
+            <li>
+                <h5>lcd driver board</h5>
+                <p>There are many different kinds of LCD driver boards, so depending on what LCD you are using, this step will be different. All that needs to happen is that you tap into the 12v supply of the board to make an output for the fan.</p>
+                <p>It is not recommended to use the audio power supply for the fans because the fans can introduce noise into the audio signal.</p>
+            </li>
+        </ul>
+        <br>
+
+
+        <h3>mechanical assembly</h3>
+
+        <h4>cabinet</h4>
+        <p>The main piece that needs assembly is the outer cabinet that can be made of wood or MDF. This cabinet has been designed to just barely fit onto a piece of 24" by 48" plywood, 1/2 inch thick, so I recommend to buy 3, just in case.</p>
+        <p>I used plywood to make my cabinet. The main advantage is strength, however the grain can show through the paint. MDF can also be used, but if any water is spilled, the MDF is essentially ruined. It is also slightly weaker than plywood.</p>
+        <p>The hinges and latches are used to make the machine open like a book. This will be useful for servicing the cabinet. They can be installed on the long sides of the cabinet where it splits into 2 compartments.</p>
+        <p>The 3D model and dimensions for the wood can be found in the GitHub link at the top of this page in the <a href="#introduction">introduction section</a>.</p>
+        <p>Once you've finished building the cabinet, you can go ahead and paint it yellow. This will make it look fairly similar to the original arcade machine.</p>
+
+        <h4>plastic sheet</h4>
+        <p>A clear plastic sheet can be used to cover the display. It is not required, but very highly recommended because the LCD dispays are quite fragile.</p>
+        <p>I used a Lexan (polycarbonate) sheet for this purpose because it is easy to work with when using standard tools and much less brittle than acrylic. However, if you have a laser cutter, you may find it easier to use acrylic.</p>
+
+        <h4>electronics mounting</h4>
+        <p>The wood cabinet has 2 compartments. The top compartment is for the LCD and supporting components like the driver board, and the controls. The bottom compartment is essentially for everything else.</p>
+        <p>All the components have been selected with mountability in mind. The nylon standoffs can be installed into the wood, and then used to mount any PCBs that need to be mounted. My Intel NUC came with a VESA bracket that I repurposed to use for mounting to the wood. Anything else that cannot be mounted traditionally can be mounted using <a href="https://youtu.be/Xa8IrMWXtYc" target="_blank">this tutorial↗</a> from the 8-bit guy.</p>
+        <br>
+
+
+        <h3>software</h3>
+        <p>Now that we have a fully assembled cabinet, let's get onto the part that makes this whole thing come together, the software!</p>
+        <p>The first piece of software you'll need is the game itself. While you cannot get just Pac-Man Battle Royale, you can get Pac-Man Collection, which includes it. However, a mod needs to be installed to remove some excess menu items and that sort of thing. The mod can be found at <a href="https://github.com/vikbez/pacbrcade">this GitHub link↗</a>.</p>
+        <p>Once you have set up the game and it is running properly, you need to configure X360CE. This software is annoying to use, but I'll try to give a simple overview of everything you need to do. </p>
+        <p>The first thing you need to do when you plug in your joystick adapter boards is to go into X360CE on each controller and press <b>Clear</b>. You can access each controller using the tabs near the top of the dialog. If you get any dialog asking you to download configuration profiles when you start up X360CE, just press cancel as we don't need them.</p>
+        <p>Next, we need to map the controls. Since our joysticks have 4 directional buttons, you can map them to the D-pad. To do this, for each controller, click on the dropdown next to a D-pad direction and click <b>Record</b>. Repeat this step for each of the joystick buttons.</p>
+        <p>Configuring the buttons is very similar to the joysticks. For each of the 4 buttons, do the same procedure as the joysticks but configure the A button instead of the D-pad.</p>
+        <p>The next required piece of software you'll have to write yourself, but it is super simple. All it is is a batch script that will run on startup of the PC, which launches the game. You may also want to launch some sort of intro video as well. This script can be put in the startup folder of your Windows user.</p>
+        <p>The last piece of software you need is already built into Windows. Open a command prompt, and run the command <b>netplwiz</b>. Once the dialog shows up, uncheck the option <b>Users must enter a username and password to use this computer</b>. Next, click on the user account you have configured to autostart the game. Then, click OK. And your software setup is complete!</p>
+        <br>
+
+        <h3>conclusion</h3>
+        <p>If you've read this far, you've hopefully completed the guide and have a working arcade machine!! I hope you've had fun making it, I sure did! However, if you have any issues, make sure to check the troubleshooting section below.</p>
+        <br>
+
+
+        <h3>troubleshooting</h3>
+        <p>The main software I had trouble with was X360CE. The inputs kept getting randomly swapped, and then I had to redo the whole configuration. I solved this issue by swapping out my wireless mouse and keyboard combo, for some reason it was showing up in the Windows joystick configuration in the control panel.</p>
+        <p>The other software I had trouble with was the batch script. But after I read some tutorials online about how it worked, I was able to get it working.</p>
+    </main>
+
+    <footer>
+        <div id="footer-gif">
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+            </a>
+            <a href="https://snipchu.neocities.org">
+                <img src="/88x31/snipchu.gif" alt="bunnyguy island" />
+            </a>
+            <a href="https://github.com/gorhill/uBlock">
+                <img src="/88x31/ublock.png" alt="uBlock Origin" />
+            </a>
+            <a href="https://archive.org">
+                <img src="/88x31/internetarchive.png" alt="Internet Archive" />
+            </a>
+            <span>
+                <img src="/88x31/antinft.gif" alt="NFTs are bad" />
+            </span>
+            <a href="https://debian.org">
+                <img src="/88x31/debian.gif" alt="Debian" />
+            </a>
+            <a href="https://mozilla.org/firefox">
+                <img src="/88x31/firefox.png" alt="Firefox" />
+            </a>
+        </div>
+
+        <p>🄯<span id="currentYear"></span> WhatWare. <a href="https://github.com/whatwareweb/website" target="_blank">Source code (GitHub)↗</a></p>
+    </footer>
+
+    <canvas id="starfield"></canvas>
+</body>
+</html>

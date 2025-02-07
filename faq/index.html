@@ -41,33 +41,9 @@
         </dl>
     </main>
     
-    <footer>
-        <div id="footer-gif">
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
-            </a>
-            <a href="https://snipchu.neocities.org">
-                <img src="/88x31/snipchu.gif" alt="bunnyguy island" />
-            </a>
-            <a href="https://github.com/gorhill/uBlock">
-                <img src="/88x31/ublock.png" alt="uBlock Origin" />
-            </a>
-            <a href="https://archive.org">
-                <img src="/88x31/internetarchive.png" alt="Internet Archive" />
-            </a>
-            <span>
-                <img src="/88x31/antinft.gif" alt="NFTs are bad" />
-            </span>
-            <a href="https://debian.org">
-                <img src="/88x31/debian.gif" alt="Debian" />
-            </a>
-            <a href="https://mozilla.org/firefox">
-                <img src="/88x31/firefox.png" alt="Firefox" />
-            </a>
-        </div>
-        
-        <p>🄯<span id="currentYear"></span> WhatWare. <a href="https://github.com/whatwareweb/website" target="_blank">Source code (GitHub)↗</a></p>
-    </footer>
+    <footer id="page-footer"></footer>
+    
+    <script> fetch('../footer/footer.html').then(response => response.text()).then(html => { document.getElementById('page-footer').innerHTML = html;}); </script>
     
     <canvas id="starfield"></canvas>
 </body>

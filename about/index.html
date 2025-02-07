@@ -30,7 +30,7 @@
     <main>
         <h2>about whatware</h2>
         <p>👋 Hi, I'm WhatWare!</p>
-        <p>I'm a <span id="myAge"></span>-year-old developer, electronics engineer, and open-source enthusiast. I'm decently competent in a lot of different areas, but not truly excellent at any particular thing (yet).</p>
+        <p>I'm a <span id="myAge"><script> document.getElementById("myAge").innerHTML = Math.abs(new Date(Date.now() - new Date("2007-10")).getUTCFullYear() - 1970); </script></span>-year-old developer, electronics engineer, and open-source enthusiast. I'm decently competent in a lot of different areas, but not truly excellent at any particular thing (yet).</p>
         <p>When I'm not at my desk programming, watching DIY/repair videos, or soldering, I enjoy playing ping-pong, repairing computers, and making music.</p>
         <br>
         <h2>get in touch</h2>

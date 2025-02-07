@@ -4,7 +4,7 @@ if (copyleftYear != null) {
 }
 
 let currentAge = document.getElementById("myAge");
-if (copyleftYear != null) {
+if (currentAge != null) {
     let myDate = new Date("2007-10");
     let ageDate = new Date(Date.now() - myDate);
     currentAge.innerHTML = Math.abs(ageDate.getUTCFullYear() - 1970);
